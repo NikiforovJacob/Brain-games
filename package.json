@@ -1,0 +1,17 @@
+{
+  "name": "brain_games",
+  "version": "1.0.0",
+  "description": "console game",
+  "main": "src/bin/brain-games.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Nikiforov Yakov",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  }
+}

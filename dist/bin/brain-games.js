@@ -1,0 +1,3 @@
+#!/usr/bin/env node
+console.log('Wellcome to Brain Games!');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9iaW4vYnJhaW4tZ2FtZXMuanMiXSwibmFtZXMiOlsiY29uc29sZSIsImxvZyJdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQUEsT0FBTyxDQUFDQyxHQUFSLENBQVksMEJBQVoiLCJzb3VyY2VzQ29udGVudCI6WyIjIS91c3IvYmluL2VudiBub2RlXG5jb25zb2xlLmxvZygnV2VsbGNvbWUgdG8gQnJhaW4gR2FtZXMhJyk7XG4iXX0=

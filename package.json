@@ -4,8 +4,13 @@
   "description": "console game",
   "main": "",
   "bin": {
-	"brain-games": "dist/bin/brain-games.js"
+    "brain-games": "dist/bin/brain-games.js"
   },
+  "keywords": [
+    "game",
+    "brain",
+    "mind"
+  ],
   "files": [
     "dist"
   ],

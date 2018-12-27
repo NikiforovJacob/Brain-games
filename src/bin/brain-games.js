@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import {dialog} from '../index'
+import { dialog } from '..';
 
 dialog();

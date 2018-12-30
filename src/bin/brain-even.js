@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { dialogIsEven } from '..';
+import startBrainEven from '../games/even';
 
-dialogIsEven();
+startBrainEven();

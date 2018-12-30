@@ -1,11 +1,12 @@
 {
   "name": "braingameshexletnikiforovyakov",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "console game",
   "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "keywords": [
     "game",

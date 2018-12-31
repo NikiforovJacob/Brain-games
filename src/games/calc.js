@@ -3,7 +3,7 @@ import randomNum from '../utils';
 
 const minNum = 0;
 const maxNum = 99;
-const conditions = 'What is the result of the expression?\n';
+const conditions = 'What is the result of the expression?';
 const genQuestionAndAnswerStr = () => {
   const randomNum1 = randomNum(minNum, maxNum);
   const randomNum2 = randomNum(minNum, maxNum);

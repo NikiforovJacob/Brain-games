@@ -1,9 +1,15 @@
 import gameEngine from '..';
+import randomNum from '../utils';
 
-const conditions = 'Answer "yes" if number even otherwise answer "no".\n';
-const question = () => Math.round(Math.random() * 100);
+const minNum = 0;
+const maxNum = 99;
+const conditions = 'Answer "yes" if number even otherwise answer "no".';
 const isEven = number => number % 2 === 0;
-const rightAnsver = questionString => (isEven(questionString) ? 'yes' : 'no');
+const genQuestionAndAnswerStr = () => {
+  const questionString = String(randomNum(minNum, maxNum));
+  const rightAnswer = (isEven(questionString) ? 'yes' : 'no');
+  return `${questionString}|${rightAnswer}`;
+};
 
-const startBrainEven = () => gameEngine(conditions, question, rightAnsver);
+const startBrainEven = () => gameEngine(conditions, genQuestionAndAnswerStr);
 export default startBrainEven;

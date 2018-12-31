@@ -1,15 +1,12 @@
 import gameEngine from '..';
+import randomNum from '../utils';
 
-const conditions = 'What is the result of the expression?\n';
-const question = () => {
-  const randomNum1 = Math.round(Math.random() * 100);
-  const randomNum2 = Math.round(Math.random() * 100);
-  return String(`${randomNum1} ${randomNum2}`);
-};
-const rightAnsver = (questionString) => {
-  const spacePosition = questionString.indexOf(' ');
-  let num1 = parseInt(questionString.slice(0, spacePosition), 10);
-  let num2 = parseInt(questionString.slice(spacePosition + 1, questionString.lenght), 10);
+const minNum = 0;
+const maxNum = 99;
+const conditions = 'Find the greatest common divisor of given numbers.';
+const gcd = (num1In, num2In) => {
+  let num1 = num1In;
+  let num2 = num2In;
   while (num1 !== 0 && num2 !== 0) {
     if (num1 > num2) {
       num1 %= num2;
@@ -20,5 +17,13 @@ const rightAnsver = (questionString) => {
   return String(num1 + num2);
 };
 
-const startBrainGcd = () => gameEngine(conditions, question, rightAnsver);
+const genQuestionAndAnswerStr = () => {
+  const randomNum1 = randomNum(minNum, maxNum);
+  const randomNum2 = randomNum(minNum, maxNum);
+  const question = String(`${randomNum1} ${randomNum2}`);
+  const rightAnswer = gcd(randomNum1, randomNum2);
+  return `${question}|${rightAnswer}`;
+};
+
+const startBrainGcd = () => gameEngine(conditions, genQuestionAndAnswerStr);
 export default startBrainGcd;

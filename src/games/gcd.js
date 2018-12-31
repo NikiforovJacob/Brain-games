@@ -1,5 +1,5 @@
 import gameEngine from '..';
-import randomNum from '../utils';
+import randomNum, { cons } from '../utils';
 
 const minNum = 0;
 const maxNum = 99;
@@ -17,13 +17,13 @@ const gcd = (num1In, num2In) => {
   return num1 + num2;
 };
 
-const genQuestionAndAnswerStr = () => {
+const genPairQuestionAndAnswerStr = () => {
   const randomNum1 = randomNum(minNum, maxNum);
   const randomNum2 = randomNum(minNum, maxNum);
   const question = `${randomNum1} ${randomNum2}`;
-  const rightAnswer = gcd(randomNum1, randomNum2);
-  return `${question}|${rightAnswer}`;
+  const rightAnswerStr = String(gcd(randomNum1, randomNum2));
+  return cons(question, rightAnswerStr);
 };
 
-const startBrainGcd = () => gameEngine(conditions, genQuestionAndAnswerStr);
+const startBrainGcd = () => gameEngine(conditions, genPairQuestionAndAnswerStr);
 export default startBrainGcd;

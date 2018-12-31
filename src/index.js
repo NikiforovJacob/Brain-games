@@ -10,9 +10,9 @@ export const dialog = () => {
   console.log(`Hello, ${name}!`);
 };
 
-const gameEngine = (conditions, genPairQuestionAndAnswer) => {
+const gameEngine = (description, genPairQuestionAndAnswer) => {
   console.log(wellcome);
-  console.log(conditions, newLine);
+  console.log(description, newLine);
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!${newLine}`);
   for (let i = 0; i < roundCounts; i += 1) {

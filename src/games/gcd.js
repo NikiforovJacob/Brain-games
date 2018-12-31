@@ -3,7 +3,7 @@ import randomNum, { cons } from '../utils';
 
 const minNum = 0;
 const maxNum = 99;
-const conditions = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 const gcd = (num1In, num2In) => {
   let num1 = num1In;
   let num2 = num2In;
@@ -17,13 +17,12 @@ const gcd = (num1In, num2In) => {
   return num1 + num2;
 };
 
-const genPairQuestionAndAnswerStr = () => {
+const genPairQuestionAndAnswer = () => {
   const randomNum1 = randomNum(minNum, maxNum);
   const randomNum2 = randomNum(minNum, maxNum);
   const question = `${randomNum1} ${randomNum2}`;
-  const rightAnswerStr = String(gcd(randomNum1, randomNum2));
-  return cons(question, rightAnswerStr);
+  const rightAnswer = String(gcd(randomNum1, randomNum2));
+  return cons(question, rightAnswer);
 };
 
-const startBrainGcd = () => gameEngine(conditions, genPairQuestionAndAnswerStr);
-export default startBrainGcd;
+export default () => gameEngine(description, genPairQuestionAndAnswer);

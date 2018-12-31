@@ -14,13 +14,13 @@ const gcd = (num1In, num2In) => {
       num2 %= num1;
     }
   }
-  return String(num1 + num2);
+  return num1 + num2;
 };
 
 const genQuestionAndAnswerStr = () => {
   const randomNum1 = randomNum(minNum, maxNum);
   const randomNum2 = randomNum(minNum, maxNum);
-  const question = String(`${randomNum1} ${randomNum2}`);
+  const question = `${randomNum1} ${randomNum2}`;
   const rightAnswer = gcd(randomNum1, randomNum2);
   return `${question}|${rightAnswer}`;
 };

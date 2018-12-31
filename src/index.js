@@ -16,11 +16,11 @@ const gameEngine = (description, generationPairQuestionAndAnswer) => {
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!${newLine}`);
   for (let i = 0; i < roundCounts; i += 1) {
-    const PairQuestionAndAnswer = generationPairQuestionAndAnswer();
-    const question = car(PairQuestionAndAnswer);
-    const rightAnswer = cdr(PairQuestionAndAnswer);
+    const pairQuestionAndAnswer = generationPairQuestionAndAnswer();
+    const question = car(pairQuestionAndAnswer);
+    const rightAnswer = cdr(pairQuestionAndAnswer);
     const userAnswer = readlineSync.question(`Question: ${question}${newLine}Your answer: `);
-    if (String(userAnswer) === String(rightAnswer)) {
+    if (userAnswer === rightAnswer) {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${rightAnswer}'.`);

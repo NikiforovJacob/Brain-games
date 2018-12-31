@@ -13,13 +13,13 @@ const generationPairQuestionAndAnswer = () => {
   switch (choiserOperator) {
     case 1:
       question = `${randomNum1} + ${randomNum2}`;
-      rightAnswer = randomNum1 + randomNum2;
+      rightAnswer = String(randomNum1 + randomNum2);
       break;
     case 2: question = `${randomNum1} - ${randomNum2}`;
-      rightAnswer = randomNum1 - randomNum2;
+      rightAnswer = String(randomNum1 - randomNum2);
       break;
     default: question = `${randomNum1} * ${randomNum2}`;
-      rightAnswer = randomNum1 * randomNum2;
+      rightAnswer = String(randomNum1 * randomNum2);
   }
   return cons(question, rightAnswer);
 };

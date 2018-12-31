@@ -16,7 +16,7 @@ const generationPairQuestionAndAnswer = () => {
       progression += ' ..';
     }
   }
-  const rightAnswer = firstNum + progressionStep * positionMissingNum;
+  const rightAnswer = String(firstNum + progressionStep * positionMissingNum);
   const question = progression.trim();
   return cons(question, rightAnswer);
 };

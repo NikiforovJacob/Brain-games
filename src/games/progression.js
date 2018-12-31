@@ -2,25 +2,23 @@ import gameEngine from '..';
 import randomNum, { cons } from '../utils';
 
 const description = 'What number is missing in the progression?';
-const genPairQuestionAndAnswer = () => {
+const progressionLength = 10;
+const generationPairQuestionAndAnswer = () => {
   const firstNum = randomNum(1, 9);
-  let nextNum = firstNum;
-  const incNum = randomNum(1, 9);
+  const progressionStep = randomNum(1, 9);
+  const positionMissingNum = randomNum(1, 9);
   let progression = '';
-  const missPos = randomNum(1, 9);
-  let rightAnswer = '';
-  for (let i = 0; i < 10; i += 1) {
-    if (i !== missPos) {
+  for (let i = 0; i < progressionLength; i += 1) {
+    const nextNum = firstNum + progressionStep * i;
+    if (i !== positionMissingNum) {
       progression += ` ${nextNum}`;
     } else {
       progression += ' ..';
-      rightAnswer = String(nextNum);
     }
-    nextNum += incNum;
   }
-  const question = progression.slice(1, progression.length);
-
+  const rightAnswer = firstNum + progressionStep * positionMissingNum;
+  const question = progression.trim();
   return cons(question, rightAnswer);
 };
 
-export default () => gameEngine(description, genPairQuestionAndAnswer);
+export default () => gameEngine(description, generationPairQuestionAndAnswer);

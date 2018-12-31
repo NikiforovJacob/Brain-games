@@ -17,12 +17,12 @@ const gcd = (num1In, num2In) => {
   return num1 + num2;
 };
 
-const genPairQuestionAndAnswer = () => {
+const generationPairQuestionAndAnswer = () => {
   const randomNum1 = randomNum(minNum, maxNum);
   const randomNum2 = randomNum(minNum, maxNum);
   const question = `${randomNum1} ${randomNum2}`;
-  const rightAnswer = String(gcd(randomNum1, randomNum2));
+  const rightAnswer = gcd(randomNum1, randomNum2);
   return cons(question, rightAnswer);
 };
 
-export default () => gameEngine(description, genPairQuestionAndAnswer);
+export default () => gameEngine(description, generationPairQuestionAndAnswer);

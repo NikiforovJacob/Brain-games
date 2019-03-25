@@ -4,21 +4,21 @@
 
 [![asciicast](https://asciinema.org/a/5fT3chGB0DKzj4bWVsZH9Sszw.svg)](https://asciinema.org/a/5fT3chGB0DKzj4bWVsZH9Sszw)
 
-##Description
+## Description
 
 This is a mini math games in CLI interface. App consist 5 games:
 
-*brain-even
-*brain-calc
-*brain-prime
-*brain-progression
-*brain-gcd
+* brain-even
+* brain-calc
+* brain-prime
+* brain-progression
+* brain-gcd
 
 
-##Setup
+## Setup
 
 `$ sudo npm install -g braingameshexletnikiforovyakov`
 
-##Game's rules
+## Game's rules
 
 Every game has 3 rounds. If you give right answer on any offered question it lets you go to the next round otherwise game over, which reports message with correct answer.

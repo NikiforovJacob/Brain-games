@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a mini math games in CLI interface. App consist 5 games:
+This is the mini math games in CLI interface. App consist 5 games:
 
 * brain-even
 * brain-calc

@@ -12,4 +12,7 @@ const isPrime = (num) => {
   return true;
 };
 
-export default () => gameEngine(description, generationPairQuestionAndBinaryAnswer(minNum, maxNum, isPrime));
+export default () => gameEngine(
+  description,
+  generationPairQuestionAndBinaryAnswer(minNum, maxNum, isPrime),
+);

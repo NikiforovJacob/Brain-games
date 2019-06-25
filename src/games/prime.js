@@ -1,5 +1,5 @@
 import gameEngine from '..';
-import randomNum, { cons } from '../utils';
+import { generationPairQuestionAndBinaryAnswer } from '../utils';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const minNum = -10;
@@ -12,10 +12,4 @@ const isPrime = (num) => {
   return true;
 };
 
-const generationPairQuestionAndAnswer = () => {
-  const question = String(randomNum(minNum, maxNum));
-  const rightAnswer = (isPrime(question) ? 'yes' : 'no');
-  return cons(question, rightAnswer);
-};
-
-export default () => gameEngine(description, generationPairQuestionAndAnswer);
+export default () => gameEngine(description, generationPairQuestionAndBinaryAnswer(minNum, maxNum, isPrime));

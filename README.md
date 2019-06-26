@@ -1,10 +1,10 @@
 # Brain-games #
-[![Maintainability](https://api.codeclimate.com/v1/badges/f9e9856f0bced7af6e77/maintainability)](https://codeclimate.com/github/NikiforovJacob/project-lvl1-s400/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2e36eabe6e3eafc0c7bc/maintainability)](https://codeclimate.com/github/NikiforovJacob/Brain-games/maintainability)
 [![Build Status](https://travis-ci.org/NikiforovJacob/Brain-games.svg?branch=master)](https://travis-ci.org/NikiforovJacob/Brain-games)
 
 ## Description
 
-This is a mini math games in CLI interface. App consist 5 games:
+This is the mini math games in CLI interface. App consist 5 games:
 
 * brain-even
 * brain-calc

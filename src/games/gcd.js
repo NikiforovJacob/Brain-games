@@ -25,4 +25,4 @@ const generationPairQuestionAndAnswer = () => {
   return cons(question, rightAnswer);
 };
 
-export default () => gameEngine(description, generationPairQuestionAndAnswer);
+export default name => gameEngine(name, description, generationPairQuestionAndAnswer);
